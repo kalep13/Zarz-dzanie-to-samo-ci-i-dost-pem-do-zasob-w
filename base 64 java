@@ -1,0 +1,24 @@
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
+
+public class Main {
+    public static void main(String[] args) {
+        String originalString = "Polska Mistrzem Polski";
+        String encodedString = encodeToBase64(originalString);
+        String decodedString = decodeFromBase64(encodedString);
+
+        System.out.println("Original String: " + originalString);
+        System.out.println("Encoded String: " + encodedString);
+        System.out.println("Decoded String: " + decodedString);
+    }
+
+    public static String encodeToBase64(String input) {
+        byte[] encodedBytes = Base64.getEncoder().encode(input.getBytes(StandardCharsets.UTF_8));
+        return new String(encodedBytes, StandardCharsets.UTF_8);
+    }
+
+    public static String decodeFromBase64(String input) {
+        byte[] decodedBytes = Base64.getDecoder().decode(input.getBytes(StandardCharsets.UTF_8));
+        return new String(decodedBytes, StandardCharsets.UTF_8);
+    }
+}
