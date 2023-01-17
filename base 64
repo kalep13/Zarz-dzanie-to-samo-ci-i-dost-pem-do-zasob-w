@@ -5,4 +5,4 @@ def encrypt(text):
     decodeText = b64Text.decode('utf-8')
     return decodeText
 encryptedText = encrypt("jestem zwyciezca")
-print(encryptedText)
+print(encryptedText) 
