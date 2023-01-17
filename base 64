@@ -1,8 +1,0 @@
-import base64
-def encrypt(text):
-    encodeText = text.encode('utf-8')
-    b64Text = base64.b64encode(encodeText)
-    decodeText = b64Text.decode('utf-8')
-    return decodeText
-encryptedText = encrypt("jestem zwyciezca")
-print(encryptedText) 
