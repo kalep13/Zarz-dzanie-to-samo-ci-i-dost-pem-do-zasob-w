@@ -14,7 +14,7 @@ public class GFG {
     }
 }
 
-odkodowanie wiadomości:
+#odkodowanie wiadomości:
 
 import java.util.*;
 public class GFG {
